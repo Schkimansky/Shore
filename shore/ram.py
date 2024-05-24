@@ -13,3 +13,8 @@ def get_available_ram():
 def get_used_ram():
     virtual_mem = _psutil.virtual_memory()    
     return virtual_mem.used
+
+@lru_cache
+def get_swap_ram():
+    swap_mem = _psutil.swap_memory()
+    return swap_mem.total
