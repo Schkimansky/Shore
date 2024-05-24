@@ -1,4 +1,5 @@
 import psutil as _psutil
+from functools import lru_cache
 
 def get_cpu_cores(): 
     """
@@ -12,6 +13,8 @@ def get_virtual_cpu_cores():
     """
     return _psutil.cpu_count(logical=True)
 
+# optimize it by storing it in cache cuz its not like the user is changing the cpu while its running
+@lru_cache
 def get_max_cpu_speed():
     cpu_freq = _psutil.cpu_freq()
     return cpu_freq.max
