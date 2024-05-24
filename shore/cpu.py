@@ -1,11 +1,13 @@
 import psutil as _psutil
 from functools import lru_cache
 
+@lru_cache
 def get_cpu_cores(): 
     """
     Returns the number of cpu cores in your computer.
     """
     return _psutil.cpu_count(logical=False)
+@lru_cache
 def get_virtual_cpu_cores(): 
     """
     Returns the number of virtual cpu cores in your computer.

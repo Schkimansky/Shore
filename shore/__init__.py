@@ -1,7 +1,10 @@
 cpu = ['get_cpu_cores', 'get_virtual_cpu_cores', 'get_max_cpu_speed', 'get_min_cpu_speed', 'get_cpu_usage']
+ram = ['get_ram']
 
-__all__ = cpu
+__all__ = cpu + ram
 
 from cpu import *
+from ram import *
 
-_ = get_cpu_cores, get_virtual_cpu_cores, get_max_cpu_speed, get_min_cpu_speed, get_cpu_usage
+_ = get_cpu_cores, get_virtual_cpu_cores, get_max_cpu_speed, get_min_cpu_speed, get_cpu_usage, \
+    get_ram
