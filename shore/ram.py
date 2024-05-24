@@ -9,3 +9,7 @@ def get_ram():
 def get_available_ram():
     virtual_mem = _psutil.virtual_memory()    
     return virtual_mem.available
+
+def get_used_ram():
+    virtual_mem = _psutil.virtual_memory()    
+    return virtual_mem.used
