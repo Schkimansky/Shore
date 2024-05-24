@@ -23,3 +23,7 @@ def get_max_cpu_speed():
 def get_min_cpu_speed():
     cpu_freq = _psutil.cpu_freq()
     return cpu_freq.min
+
+def get_cpu_usage():
+    cpu_freq = _psutil.cpu_freq()
+    return cpu_freq.current
