@@ -18,3 +18,8 @@ def get_virtual_cpu_cores():
 def get_max_cpu_speed():
     cpu_freq = _psutil.cpu_freq()
     return cpu_freq.max
+
+@lru_cache
+def get_min_cpu_speed():
+    cpu_freq = _psutil.cpu_freq()
+    return cpu_freq.min
