@@ -12,3 +12,6 @@ def get_virtual_cpu_cores():
     """
     return _psutil.cpu_count(logical=True)
 
+def get_max_cpu_speed():
+    cpu_freq = _psutil.cpu_freq()
+    return cpu_freq.max
