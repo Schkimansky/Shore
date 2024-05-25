@@ -1,5 +1,21 @@
-# Shore
-Get information about your system easily!
+# Donations
+It takes me a long time to make these libraries. If you would like to support my work, Then you can follow my patreon :)
+
+https://www.patreon.com/Schkimansky
+
+# Library
+This is a easy to use python library to get information about your system! Such as how much ram you have, Cpu cores etc.
+
+```python
+import systore
+result = systore.get_disk_partitions()
+print(result) # All disk partitions on your system
+```
+
+# Installation
+```bash
+pip install systore
+```
 
 # Documentation
 These are all the functions, They are pretty much self explanatory.
